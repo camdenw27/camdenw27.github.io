@@ -1,0 +1,193 @@
+/*
+ * Camden Willett — site-specific visual system
+ *
+ * The v1 runtime is gem-owned; this local override keeps the site's visual
+ * language intentionally quiet, editorial, and content-first.
+ */
+
+:root {
+  --site-ink: #1f2933;
+  --site-muted: #66717d;
+  --site-line: #dfe4e8;
+  --site-paper: #fbfaf7;
+  --site-panel: #ffffff;
+  --site-accent: #8b5e3c;
+  --site-accent-hover: #6f472d;
+  --site-radius: 2px;
+  --site-content-width: 1040px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--site-paper);
+  color: var(--site-ink);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  letter-spacing: 0.005em;
+}
+
+main {
+  max-width: var(--site-content-width);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar-brand {
+  color: var(--site-ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+}
+
+h1 {
+  font-size: clamp(2.25rem, 5vw, 4rem);
+  line-height: 1.08;
+}
+
+h2 {
+  margin-top: 2.75rem;
+  font-size: clamp(1.65rem, 3vw, 2.35rem);
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+a {
+  color: var(--site-accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  transition: color 160ms ease, opacity 160ms ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--site-accent-hover);
+}
+
+.navbar {
+  background: color-mix(in srgb, var(--site-paper) 92%, transparent) !important;
+  border-bottom: 1px solid var(--site-line);
+  box-shadow: none !important;
+  backdrop-filter: blur(14px);
+}
+
+.navbar-brand {
+  font-size: 1.15rem;
+}
+
+.navbar-nav .nav-link {
+  color: var(--site-muted);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link.active {
+  color: var(--site-ink);
+}
+
+.profile img {
+  border-radius: var(--site-radius);
+  box-shadow: 18px 18px 0 rgba(139, 94, 60, 0.1);
+}
+
+.social a {
+  color: var(--site-muted);
+  margin-right: 0.9rem;
+}
+
+.social a:hover {
+  color: var(--site-accent);
+}
+
+.card,
+.hoverable,
+.publications .row,
+.post-list li {
+  background: var(--site-panel);
+  border: 1px solid var(--site-line);
+  border-radius: var(--site-radius);
+  box-shadow: none;
+}
+
+.card:hover,
+.hoverable:hover {
+  box-shadow: 0 10px 26px rgba(31, 41, 51, 0.07);
+  transform: translateY(-2px);
+}
+
+.post-list {
+  padding-left: 0;
+}
+
+.post-list li {
+  list-style: none;
+  margin: 1.25rem 0;
+  padding: 1.5rem 1.75rem;
+}
+
+.post-title {
+  color: var(--site-ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.45rem;
+}
+
+.post-meta,
+.post-tags,
+footer,
+.profile .more-info {
+  color: var(--site-muted);
+  font-size: 0.86rem;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--site-line);
+  margin: 3rem 0;
+  opacity: 1;
+}
+
+code,
+pre {
+  border-radius: var(--site-radius);
+}
+
+footer {
+  border-top: 1px solid var(--site-line);
+  margin-top: 5rem;
+}
+
+@media (max-width: 767px) {
+  body {
+    font-size: 15px;
+  }
+
+  .profile img {
+    box-shadow: 10px 10px 0 rgba(139, 94, 60, 0.1);
+  }
+
+  .post-list li {
+    padding: 1.15rem;
+  }
+}
+
+[data-theme="dark"] {
+  --site-ink: #edf0f2;
+  --site-muted: #a9b1b8;
+  --site-line: #303940;
+  --site-paper: #15191c;
+  --site-panel: #1c2226;
+  --site-accent: #d6a47e;
+  --site-accent-hover: #efc09b;
+}
