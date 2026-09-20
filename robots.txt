@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://camdenw27.github.io/al-folio/sitemap.xml
+Sitemap: https://camdenw27.github.io/sitemap.xml
